@@ -5,11 +5,11 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import CurrencyFormat from "react-currency-format";
 
 const useStyles = makeStyles({
   card: {
-    minWidth: 175,
-    marginLeft: 100
+    minWidth: 175
   },
   bullet: {
     display: "inline-block",
@@ -31,27 +31,19 @@ export default function SimpleCard() {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be
-          {bull}
-          nev
-          {bull}o{bull}
-          lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
+        <Typography variant="h5">Kiểm soát lãi suất theo thời gian</Typography>
+        <Typography variant="body2" component="p">
+          Số tiền
+          <CurrencyFormat
+            value={100000}
+            display={"text"}
+            prefix={"$"}
+            thousandSeparator={true}
+            renderText={value => <div>{value}</div>}
+          />
         </Typography>
         <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          Công thức tính
         </Typography>
       </CardContent>
       <CardActions>

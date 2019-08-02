@@ -1,13 +1,13 @@
-import React from 'react';
-import App, { Container } from 'next/app';
-import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../components/theme';
+import React from "react";
+import App, { Container } from "next/app";
+import Head from "next/head";
+import { ThemeProvider } from "@material-ui/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import theme from "../components/theme";
 
 class MyApp extends App {
   componentDidMount() {
-    const jssStyles = document.querySelector('#jss-server-side');
+    const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
@@ -18,7 +18,7 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title>ARK</title>
+          <title>PHẦN MỀM TÍNH NPV - ĐÁNH GIÁ TÍNH KHẢ THI CỦA DỰ ÁN</title>
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
