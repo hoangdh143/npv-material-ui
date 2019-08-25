@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
-import Typography from '@material-ui/core/Typography';
-import Link from '../components/Link';
 import FrontPage from "../components/FrontPage/FrontPage";
+
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -28,7 +21,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      <FrontPage/>
+        <FrontPage/>
     </React.Fragment>
   );
 }
